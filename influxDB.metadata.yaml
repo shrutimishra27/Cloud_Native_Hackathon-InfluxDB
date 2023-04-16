@@ -1,0 +1,20 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+# Name of the application, not necessarily a valid k8s name.
+name: "influxdb"
+version: latest
+description: InfluxDB is an open-source time series database developed by the company InfluxData. 
+# Keywords facilitate searches on the catalog
+keywords:
+  - "data store"
+  - "DevOps monitoring"
+  - "log data" 
+  - "application metrics"
+  - "real-time analytics"
+license: "MIT License"
+url: "https://www.influxdata.com/"
+doc: "https://docs.influxdata.com/"
+logo:
+  - src: "https://www.niagaramarketplace.com/media/catalog/product/cache/8272e5d606ba848a87db29108f4efa34/m/a/marketplace_icons_13_.png"
+    type: "image/png"
+    size: "120x120"

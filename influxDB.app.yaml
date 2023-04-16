@@ -1,0 +1,44 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: influxdb
+  annotations:
+    version: latest
+    description: "Latest version of InfluxDB"
+spec:
+  components:
+    - name: influxdb
+      type: webservice
+      properties:
+        image: influxdb:latest
+        ports:
+          - port: 8086
+            expose: true
+        livenessProbe:
+          httpGet:
+            path: /ping
+            port: 8086
+          initialDelaySeconds: 15
+          periodSeconds: 10
+      traits:
+        - type: resource
+          properties:
+            cpu: 0.5
+            memory: "500M"
+            requests:
+              cpu: 0.5
+              memory: "500M"
+            limits:
+              cpu: 0.95
+              memory: "950M"
+        - type: napptive-ingress
+          properties:
+            name: influxdb-ingress
+            port: 8086
+            path: /
+  policies:
+    - name: healthscope-policy
+      type: health
+      properties:
+        probeInterval: 30
+        probeTimeout: 10
