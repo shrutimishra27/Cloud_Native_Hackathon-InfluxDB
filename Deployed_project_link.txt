@@ -1,0 +1,1 @@
+https://influxdb-ingress-cgsd7hrh51taq9hpjneg.apps.hackathon.napptive.dev/onboarding/0
