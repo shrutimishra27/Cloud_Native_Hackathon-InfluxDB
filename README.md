@@ -1,6 +1,10 @@
-# Team NAPP-DEVS
+<h1 align="center">
+Team NAPP-DEVS
+</h1>
+<h2 align="center">
 • <a href="https://github.com/Shruti-Mishra27">Shruti Mishra</a>
 • <a href="https://github.com/Shivraj-Nakum">Shivraj Nakum</a> •
+</h2>
 
 ---
 
